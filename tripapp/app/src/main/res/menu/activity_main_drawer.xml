@@ -15,7 +15,7 @@
         <item
                 android:id="@+id/nav_history"
                 android:icon="@drawable/ic_menu_history"
-                android:title="@string/RecentTrips"/>
+                android:title="@string/History"/>
         <item
                 android:id="@+id/nav_balance"
                 android:icon="@drawable/ic_menu_balance"

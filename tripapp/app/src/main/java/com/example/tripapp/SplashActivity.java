@@ -13,7 +13,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        progressBar=(ProgressBar)findViewById(R.id.progress);
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
         Thread thred = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -31,7 +31,7 @@ public class SplashActivity extends Activity {
                 e.printStackTrace();
             }} }
     public void startApp(){
-        Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent(this,LoginActivity.class);
         startActivity(i);
         finish();
     }}

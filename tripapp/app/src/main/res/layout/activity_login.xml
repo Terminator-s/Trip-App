@@ -7,4 +7,89 @@
         android:layout_height="match_parent"
         tools:context=".LoginActivity">
 
+
+    <TextView
+            android:text="Token ID"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/textView3" android:textSize="20sp"
+            android:textColor="@android:color/background_dark" android:layout_marginStart="60dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
+            android:layout_marginTop="208dp" app:layout_constraintTop_toTopOf="parent" android:textStyle="bold"/>
+    <TextView
+            android:text="Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" android:textSize="20sp"
+            android:textColor="@android:color/background_dark" android:layout_marginStart="60dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
+            android:layout_marginTop="72dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:textStyle="bold"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView4" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/tokenid"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
+    <Button
+            android:text="Sign in"
+            android:layout_width="176dp"
+            android:layout_height="44dp"
+            android:id="@+id/signinbtn"
+            android:background="@color/colorPrimaryDark" android:textColor="@android:color/background_light"
+            style="@style/shadoweffect" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginTop="72dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/password" app:layout_constraintHorizontal_bias="0.598"
+            android:textStyle="bold" android:textSize="18sp"/>
+    <TextView
+            android:text="Forgot password?"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:id="@+id/textView5"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBaseline_toBaselineOf="@+id/pwreset" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="112dp" android:layout_marginStart="112dp" android:textSize="18sp"/>
+    <TextView
+            android:text="Reset"
+            android:layout_width="52dp"
+            android:layout_height="36dp"
+            android:id="@+id/pwreset"
+            android:textColor="@color/colorPrimaryDark" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="96dp" android:layout_marginRight="96dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/signinbtn" app:layout_constraintVertical_bias="0.214"
+            android:textStyle="bold" android:textSize="18sp"/>
+    <TextView
+            android:text="Login"
+            android:layout_width="127dp"
+            android:layout_height="51dp"
+            android:id="@+id/textView7"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:typeface="sans"
+            android:textStyle="bold" android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/tokenid"
+            android:textSize="38sp" android:textAllCaps="false" app:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="10sp" app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintVertical_bias="0.597"
+            style="@style/shadoweffect"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>

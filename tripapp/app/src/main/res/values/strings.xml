@@ -14,4 +14,16 @@
     <string name="Profile">Profile</string>
     <string name="Payment">Payment</string>
     <string name="Settings">Settings</string>
+
+
+    <string name="StartTrip">Start Trip</string>
+    <string name="location">Enter location</string>
+    <string name="EndTrip">End Trip</string>
+    <string name="destination">enter destination</string>
+
+    <string name="title_activity_balance">Account Balance</string>
+    <string name="title_activity_stop">End Trip</string>
+    <string name="title_activity_travel">Traveling</string>
+    <string name="title_activity_schedule">Schedules</string>
+    <string name="title_activity_history">Trip History</string>
 </resources>

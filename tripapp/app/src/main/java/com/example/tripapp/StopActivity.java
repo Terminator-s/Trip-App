@@ -2,25 +2,28 @@ package com.example.tripapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.Toast;
-import android.view.View;
-import com.google.android.material.navigation.NavigationView;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity
+public class StopActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    Button endbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_stop);
 
         //toolbar and navigator start----------------------------------------------------------------
         {
@@ -35,25 +38,25 @@ public class MainActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
+
         }
         //toolbar and navigator end----------------------------------------------------------------
 
-        Button clickButton = (Button) findViewById(R.id.startbtn);
-        clickButton.setOnClickListener( new View.OnClickListener() {
-
+        endbtn = (Button) findViewById(R.id.endbtn);
+        endbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Trip trip = new Trip();
-                trip.setTime();
-                trip.setDate();
-                startActivity(new Intent(MainActivity.this, TravelActivity.class));
-//                Toast.makeText(MainActivity.this,trip.getDate()+">>"+trip.getTime(),Toast.LENGTH_SHORT).show();
+                displayBill();
             }
         });
     }
 
+    public void displayBill(){
+        BillDialog billDialog = new BillDialog();
+        billDialog.show(getSupportFragmentManager(),"bill dialog");
+    }
 
-    //toolbar and navigator functions start----------------------------------------------------------------
+    //toolbar and navigator function start----------------------------------------------------------------
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -93,13 +96,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         } else if (id == R.id.nav_schedule) {
-            startActivity(new Intent(this,ScheduleActivity.class));
+            startActivity(new Intent(this, ScheduleActivity.class));
         } else if (id == R.id.nav_history) {
-            startActivity(new Intent(this,HistoryActivity.class));
+            startActivity(new Intent(this, HistoryActivity.class));
         } else if (id == R.id.nav_balance) {
-            startActivity(new Intent(this,BalanceActivity.class));
+            startActivity(new Intent(this, BalanceActivity.class));
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_payment) {

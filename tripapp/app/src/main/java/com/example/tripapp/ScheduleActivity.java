@@ -2,25 +2,30 @@ package com.example.tripapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import com.google.android.material.navigation.NavigationView;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity
+import java.util.ArrayList;
+
+public class ScheduleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_schedule);
 
         //toolbar and navigator start----------------------------------------------------------------
         {
@@ -35,25 +40,35 @@ public class MainActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
+
         }
         //toolbar and navigator end----------------------------------------------------------------
 
-        Button clickButton = (Button) findViewById(R.id.startbtn);
-        clickButton.setOnClickListener( new View.OnClickListener() {
+        listView = (ListView) findViewById(R.id.listview);
 
+
+        final ArrayList<String> scheduleList = new ArrayList<>();
+        scheduleList.add("bus1");
+        scheduleList.add("bus2");
+        scheduleList.add("bus3");
+        scheduleList.add("bus4");
+
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, scheduleList);
+
+        listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Trip trip = new Trip();
-                trip.setTime();
-                trip.setDate();
-                startActivity(new Intent(MainActivity.this, TravelActivity.class));
-//                Toast.makeText(MainActivity.this,trip.getDate()+">>"+trip.getTime(),Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(ScheduleActivity.this,"clicked"+position+scheduleList.get(position).toString(),Toast.LENGTH_SHORT).show();
             }
         });
     }
 
 
-    //toolbar and navigator functions start----------------------------------------------------------------
+    //toolbar and navigator function start----------------------------------------------------------------
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -93,16 +108,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         } else if (id == R.id.nav_schedule) {
-            startActivity(new Intent(this,ScheduleActivity.class));
+            startActivity(new Intent(this, ScheduleActivity.class));
         } else if (id == R.id.nav_history) {
-            startActivity(new Intent(this,HistoryActivity.class));
+            startActivity(new Intent(this, HistoryActivity.class));
         } else if (id == R.id.nav_balance) {
-            startActivity(new Intent(this,BalanceActivity.class));
+            startActivity(new Intent(this, BalanceActivity.class));
         } else if (id == R.id.nav_profile) {
-             Intent intent=new Intent(this,UserProfileActivity.class);
-             startActivity(intent);
 
         } else if (id == R.id.nav_payment) {
 
@@ -112,4 +125,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

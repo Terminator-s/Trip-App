@@ -27,7 +27,7 @@ public class TravelActivity extends AppCompatActivity
         setContentView(R.layout.activity_travel);
 
         //toolbar and navigator start----------------------------------------------------------------
-        {
+
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
@@ -40,7 +40,7 @@ public class TravelActivity extends AppCompatActivity
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
 
-        }
+
         //toolbar and navigator end----------------------------------------------------------------
 
 

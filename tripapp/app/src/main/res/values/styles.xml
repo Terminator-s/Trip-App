@@ -13,15 +13,15 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-        <style name="shadoweffect">
-            <item name="android:paddingLeft">4px</item>
-            <item name="android:paddingBottom">4px</item>
-            <item name="android:textColor">@color/colorAccent</item>
-            <item name="android:textSize">25sp</item>
-            <item name="android:shadowColor">@android:color/background_dark</item>
-            <item name="android:shadowDx">0</item>
-            <item name="android:shadowDy">0</item>
-            <item name="android:shadowRadius">5</item>
-        </style>
+    <style name="shadoweffect">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:shadowColor">@android:color/background_dark</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
 
 </resources>

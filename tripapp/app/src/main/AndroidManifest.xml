@@ -5,7 +5,9 @@
           package="com.example.tripapp">
 
     <dist:module dist:instant="true"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >  </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -14,6 +16,31 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".PackageDetails"
+                android:label="@string/title_activity_package_details"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ChangePackage"
+                android:label="@string/title_activity_change_package"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".SendResetCode"
+                android:label="@string/title_activity_send_reset_code"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ChangePassword"
+                android:label="@string/title_activity_change_password"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ResetActivity"
+                android:label="@string/title_activity_reset"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".LoginActivity">
         </activity>
         <activity android:name=".SplashActivity">
@@ -30,35 +57,34 @@
         </activity>
         <activity
                 android:name=".UserProfileActivity"
-                android:label="@string/Profile">
-
+                android:label="@string/Profile"
+                android:theme="@style/AppTheme.NoActionBar">
+            >
         </activity>
         <activity
                 android:name=".HistoryActivity"
                 android:label="@string/title_activity_history"
                 android:theme="@style/AppTheme.NoActionBar"/>
-
         <activity
                 android:name=".ScheduleActivity"
                 android:label="@string/title_activity_schedule"
                 android:theme="@style/AppTheme.NoActionBar"/>
-
         <activity
                 android:name=".TravelActivity"
                 android:label="@string/title_activity_travel"
                 android:theme="@style/AppTheme.NoActionBar"/>
-
         <activity
                 android:name=".StopActivity"
                 android:label="@string/title_activity_stop"
                 android:theme="@style/AppTheme.NoActionBar"/>
-
         <activity
                 android:name=".BalanceActivity"
                 android:label="@string/title_activity_balance"
                 android:theme="@style/AppTheme.NoActionBar"/>
 
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".UserProfileActivity"
+              android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:background="@drawable/profile_background"
+                android:layout_width="match_parent"
+                android:layout_height="264dp"
+                android:orientation="vertical">
+            <ImageView
+                    android:layout_marginTop="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/avatar"/>
+            <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wiliam Snoe"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="21sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <TextView
+                    android:text="Email"
+                    android:layout_width="51dp"
+                    android:layout_height="28dp" android:id="@+id/textView16"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="28dp" android:layout_marginStart="28dp"/>
+            <TextView
+                    android:text="Package"
+                    android:layout_width="72dp"
+                    android:layout_height="25dp" android:id="@+id/textView14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="28dp" android:layout_marginStart="28dp" android:layout_marginTop="28dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"/>
+            <TextView
+                    android:text="Nationality"
+                    android:layout_width="82dp"
+                    android:layout_height="27dp" android:id="@+id/textView13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="28dp" android:layout_marginStart="28dp" android:layout_marginTop="28dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+            <TextView
+                    android:text="Last Name"
+                    android:layout_width="82dp"
+                    android:layout_height="23dp" android:id="@+id/textView12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="28dp" android:layout_marginStart="28dp" android:layout_marginTop="28dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"/>
+            <TextView
+                    android:text="First Name"
+                    android:layout_width="80dp"
+                    android:layout_height="26dp" android:id="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="28dp" android:layout_marginStart="28dp" android:layout_marginTop="32dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"/>
+            <TextView
+                    android:text="Token ID"
+                    android:layout_width="77dp"
+                    android:layout_height="29dp" android:id="@+id/textView10"
+                    android:textSize="14sp" android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
+                    android:layout_marginTop="64dp" app:layout_constraintTop_toTopOf="parent"/>
+            <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="52dp"
+                    android:ems="10"
+                    android:id="@+id/editText" style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+                    android:inputType="textAutoComplete"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView10" android:layout_marginEnd="44dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="44dp"/>
+            <EditText
+                    android:layout_width="263dp"
+                    android:layout_height="43dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"/>
+            <EditText
+                    android:layout_width="266dp"
+                    android:layout_height="51dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText4" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginRight="36dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView11"/>
+            <EditText
+                    android:layout_width="263dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText5" app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="36dp"
+                    android:layout_marginRight="36dp"/>
+            <EditText
+                    android:layout_width="253dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText6" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="44dp"
+                    android:layout_marginRight="44dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView13"/>
+            <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText7" android:layout_marginEnd="60dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="60dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView14"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

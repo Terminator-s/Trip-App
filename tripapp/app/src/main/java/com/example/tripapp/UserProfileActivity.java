@@ -68,13 +68,13 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            startActivity(new Intent(this,MainActivity.class));
         } else if (id == R.id.nav_schedule) {
-
+            startActivity(new Intent(this,ScheduleActivity.class));
         } else if (id == R.id.nav_history) {
-
+            startActivity(new Intent(this,HistoryActivity.class));
         } else if (id == R.id.nav_balance) {
-
+            startActivity(new Intent(this,BalanceActivity.class));
         } else if (id == R.id.nav_profile) {
             Intent intent=new Intent(this,UserProfileActivity.class);
             startActivity(intent);

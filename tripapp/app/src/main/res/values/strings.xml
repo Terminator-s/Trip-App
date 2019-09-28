@@ -26,4 +26,9 @@
     <string name="title_activity_travel">Traveling</string>
     <string name="title_activity_schedule">Schedules</string>
     <string name="title_activity_history">Trip History</string>
+    <string name="title_activity_reset">activity_reset</string>
+    <string name="title_activity_change_password">ChangePassword</string>
+    <string name="title_activity_send_reset_code">SendResetCode</string>
+    <string name="title_activity_change_package">ChangePackage</string>
+    <string name="title_activity_package_details">PackageDetails</string>
 </resources>

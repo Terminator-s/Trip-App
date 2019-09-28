@@ -82,14 +82,16 @@ public class BalanceActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this,MainActivity.class));
         } else if (id == R.id.nav_schedule) {
-            startActivity(new Intent(this, ScheduleActivity.class));
+            startActivity(new Intent(this,ScheduleActivity.class));
         } else if (id == R.id.nav_history) {
-            startActivity(new Intent(this, HistoryActivity.class));
+            startActivity(new Intent(this,HistoryActivity.class));
         } else if (id == R.id.nav_balance) {
-            startActivity(new Intent(this, BalanceActivity.class));
+            startActivity(new Intent(this,BalanceActivity.class));
         } else if (id == R.id.nav_profile) {
+            Intent intent=new Intent(this,UserProfileActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_payment) {
 
